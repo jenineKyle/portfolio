@@ -1,42 +1,40 @@
-import { FaEnvelope, FaPhone } from "react-icons/fa"; // Importing icons from react-icons
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <div className="min-h-screen bg-gray-50 p-8">
-
-            <div className="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
-                <h1 className="text-2xl font-bold text-center text-blue-600 mb-8">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100 p-6">
+            <div className="w-full max-w-md bg-white/80 backdrop-blur-lg p-8 rounded-3xl shadow-lg border border-gray-300">
+                <h1 className="text-3xl font-bold text-center text-[#B95C17] mb-6">
                     Contact Information
-                </h1>
-                <div className="space-y-2 flex items-center">
-                    {/* Name Section */}
-                    <div className="flex items-center space-x-4">
-                        {/* <span className="text-xl font-medium text-gray-700">Name:</span> */}
-                        <span className="text-xl text-gray-600">Jenine Kyle Gutierrez</span>
-                    </div>
+        </h1>
+                <div className="space-y-6">
 
                     {/* Email Section */}
-                    <div className="flex items-center space-x-4">
-                        <FaEnvelope className="text-blue-600" />
-                        <span className="text-xl font-medium text-gray-700">Email:</span>
-                        <a
-                            href="mailto:jgutierrez18@cnih.ca"
-                            className="text-xl text-blue-600 hover:underline"
-                        >
-                            jgutierrez18@cnih.ca
-                        </a>
+                    <div className="flex items-center gap-4 p-3 bg-gray-100 rounded-xl hover:bg-gray-200 transition">
+                        <FaEnvelope className="text-2xl text-blue-600" />
+                        <div>
+
+                            <a
+                                href="mailto:jgutierrez18@cnih.ca"
+                                className="block text-lg text-blue-600 hover:underline"
+                            >
+                                jgutierrez18@cnih.ca
+              </a>
+                        </div>
                     </div>
 
                     {/* Phone Section */}
-                    <div className="flex items-center space-x-4">
-                        <FaPhone className="text-blue-600" />
-                        <span className="text-xl font-medium text-gray-700">Phone:</span>
-                        <a
-                            href="tel:+17788479104"
-                            className="text-xl text-blue-600 hover:underline"
-                        >
-                            778-847-9104
-                        </a>
+                    <div className="flex items-center gap-4 p-3 bg-gray-100 rounded-xl hover:bg-gray-200 transition">
+                        <FaPhone className="text-2xl text-blue-600" />
+                        <div>
+
+                            <a
+                                href="tel:+17788479104"
+                                className="block text-lg text-blue-600 hover:underline"
+                            >
+                                778-847-9104
+              </a>
+                        </div>
                     </div>
                 </div>
             </div>

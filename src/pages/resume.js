@@ -1,72 +1,133 @@
-
 const Resume = () => {
     return (
-        <div className='p-4'>
-            <h2>Resume</h2>
-            <p>
-                Name: Jenine Kyle Gutierrez
-                Email: jgutierrez18@cnih.ca
-                Phone: 778-847-9104
-                Objective
-                A dedicated and compassionate Diagnostic Medical Sonography student at the Canadian National Institute of Health (CNIH), seeking a position where I can utilize my expertise in medical imaging and patient care to contribute to the healthcare industry. Passionate about early detection, diagnosis, and delivering high-quality patient-centered care.
+        <div style={{ margin: '50px' }} className="h-[80%] w-[90%] mx-auto bg-white shadow-2xl rounded-xl border border-gray-200 bg-gradient-to-t from-gray-100 to-white">
 
-                Education
-                Canadian National Institute of Health (CNIH)
-                Diagnostic Medical Sonography (Expected Graduation: December 2025)
+            {/* Container for Navigation and Content */}
+            <div className="flex">
 
-                12 months of theory and scan lab training, followed by an 8-month practicum rotation.
-                In good standing with CNIH.
-                Student member of Sonography Canada, ARDMS, and OARMS.
-                Experience
-                Clerk, Ultrasound Clinic
-                December 2022 – Present
+                {/* Left Navigation Bar */}
+                <div className=" w-1/4 bg-gray-50 border-r-2 p-4">
+                    <div className="flex flex-col space-y-6 p-6">
+                        <a href="#contact" className="text-xl text-blue-600 hover:underline block">Contact</a>
+                        <a href="#objective" className="text-xl text-blue-600 hover:underline block">Objective</a>
+                        <a href="#education" className="text-xl text-blue-600 hover:underline block">Education</a>
+                        <a href="#experience" className="text-xl text-blue-600 hover:underline block">Experience</a>
+                        <a href="#skills" className="text-xl text-blue-600 hover:underline block">Skills</a>
+                        <a href="#certifications" className="text-xl text-blue-600 hover:underline block">Certifications</a>
+                        <a href="#references" className="text-xl text-blue-600 hover:underline block">References</a>
+                        <a href="#cover-letter" className="text-xl text-blue-600 hover:underline block">Cover Letter</a>
+                    </div>
+                </div>
 
-                Gained hands-on experience with patient interactions and clinic workflows.
-                Assisted in diagnostic imaging procedures, contributing to the accurate detection and diagnosis of medical conditions.
-                Developed strong communication skills, ensuring that patients felt cared for and understood.
-                Worked alongside sonographers to support efficient clinic operations and optimal patient care.
-                Skills
-                Diagnostic Imaging: Proficient in sonographic techniques for imaging and diagnosis.
-                Medical Office Operations: Experience with scheduling, patient intake, and maintaining office organization.
-                Patient Care: Skilled in providing compassionate, patient-centered care.
-                Technical Proficiency: Strong foundation in sonographic equipment and software.
-                Professional Development: Active member of Sonography Canada, ARDMS, and OARMS.
-                Certifications
-                Medical Office Assistant Certification – CNIH, December 2022
-                Sonography Canada Membership
-                ARDMS Membership
-                OARMS Membership
-                References
-Available upon request.</p>
+                {/* Right Content Area */}
+                <div className="w-3/4 p-6">
+                    <div className="text-center">
+                        <h1 className="text-4xl font-bold text-gray-800">Jenine Kyle Gutierrez</h1>
+                        <p className="text-xl text-gray-600 mt-2">Diagnostic Medical Sonography Student</p>
+                    </div>
 
-            <h2>Cover Letter</h2>
-            <p>Cover Letter: Jenine Kyle Gutierrez
-            Jenine Kyle Gutierrez
-            jgutierrez18@cnih.ca
-            778-847-9104
-            [Date]
+                    <section id="contact" className="mt-8">
+                        <h2 className="text-2xl font-semibold text-gray-800">Contact Information</h2>
+                        <div className="mt-2">
+                            <p className="text-lg text-gray-700">Email: <a href="mailto:jgutierrez18@cnih.ca" className="text-blue-600">jgutierrez18@cnih.ca</a></p>
+                            <p className="text-lg text-gray-700">Phone: <a href="tel:7788479104" className="text-blue-600">778-847-9104</a></p>
+                        </div>
+                    </section>
 
-            Hiring Manager
-            [Healthcare Facility Name]
-            [Healthcare Facility Address]
-            [City, State, Zip Code]
+                    <section id="objective" className="mt-8">
+                        <h2 className="text-2xl font-semibold text-gray-800">Objective</h2>
+                        <p className="mt-2 text-lg text-gray-700">
+                            A dedicated and compassionate Diagnostic Medical Sonography student at the Canadian National Institute of Health (CNIH), seeking a position where I can utilize my expertise in medical imaging and patient care to contribute to the healthcare industry. Passionate about early detection, diagnosis, and delivering high-quality patient-centered care.
+                        </p>
+                    </section>
 
-            Dear Hiring Manager,
+                    <section id="education" className="mt-8">
+                        <h2 className="text-2xl font-semibold text-gray-800">Education</h2>
+                        <div className="mt-2">
+                            <h3 className="text-xl font-semibold text-gray-700">Canadian National Institute of Health (CNIH)</h3>
+                            <p className="text-lg text-gray-700">Diagnostic Medical Sonography (Expected Graduation: December 2025)</p>
+                            <ul className="mt-2 text-lg text-gray-700 list-disc pl-6">
+                                <li>12 months of theory and scan lab training, followed by an 8-month practicum rotation.</li>
+                                <li>In good standing with CNIH.</li>
+                                <li>Student member of Sonography Canada, ARDMS, and OARMS.</li>
+                            </ul>
+                        </div>
+                    </section>
 
-            I am writing to express my interest in applying for the Diagnostic Medical Sonographer position at [Healthcare Facility Name]. I am currently a Diagnostic Medical Sonography student at the Canadian National Institute of Health (CNIH), set to graduate in December 2025. I am deeply passionate about medical imaging and patient care, and I believe my background, skills, and dedication would allow me to make a valuable contribution to your team.
+                    <section id="experience" className="mt-8">
+                        <h2 className="text-2xl font-semibold text-gray-800">Experience</h2>
+                        <div className="mt-2">
+                            <h3 className="text-xl font-semibold text-gray-700">Clerk, Ultrasound Clinic</h3>
+                            <p className="text-lg text-gray-700">December 2022 – Present</p>
+                            <ul className="mt-2 text-lg text-gray-700 list-disc pl-6">
+                                <li>Gained hands-on experience with patient interactions and clinic workflows.</li>
+                                <li>Assisted in diagnostic imaging procedures, contributing to the accurate detection and diagnosis of medical conditions.</li>
+                                <li>Developed strong communication skills, ensuring that patients felt cared for and understood.</li>
+                                <li>Worked alongside sonographers to support efficient clinic operations and optimal patient care.</li>
+                            </ul>
+                        </div>
+                    </section>
 
-            My journey in healthcare began with the completion of a Medical Office Assistant certificate in December 2022, followed by a position as a Clerk at an ultrasound clinic. This experience immersed me in the field of diagnostic imaging and fueled my passion for sonography. Through my work, I developed strong technical skills and a profound understanding of patient-centered care, which I believe is essential in the medical imaging field.
+                    <section id="skills" className="mt-8">
+                        <h2 className="text-2xl font-semibold text-gray-800">Skills</h2>
+                        <ul className="mt-2 text-lg text-gray-700 list-disc pl-6">
+                            <li>Diagnostic Imaging: Proficient in sonographic techniques for imaging and diagnosis.</li>
+                            <li>Medical Office Operations: Experience with scheduling, patient intake, and maintaining office organization.</li>
+                            <li>Patient Care: Skilled in providing compassionate, patient-centered care.</li>
+                            <li>Technical Proficiency: Strong foundation in sonographic equipment and software.</li>
+                            <li>Professional Development: Active member of Sonography Canada, ARDMS, and OARMS.</li>
+                        </ul>
+                    </section>
 
-            In addition to my formal education, I have had the privilege of working hands-on with patients and diagnostic equipment. I am committed to ensuring that every patient feels seen, heard, and cared for during their healthcare journey. I am also an active member of Sonography Canada, ARDMS, and OARMS, which keeps me updated with the latest advancements in the field.
+                    <section id="certifications" className="mt-8">
+                        <h2 className="text-2xl font-semibold text-gray-800">Certifications</h2>
+                        <ul className="mt-2 text-lg text-gray-700 list-disc pl-6">
+                            <li>Medical Office Assistant Certification – CNIH, December 2022</li>
+                            <li>Sonography Canada Membership</li>
+                            <li>ARDMS Membership</li>
+                            <li>OARMS Membership</li>
+                        </ul>
+                    </section>
 
-            I am excited to bring my technical expertise, compassionate care, and commitment to making a meaningful difference to your healthcare facility. I am confident that I can help deliver accurate diagnoses and contribute to your high standards of patient care. I would welcome the opportunity to discuss my qualifications further and look forward to the possibility of joining your team.
+                    <section id="references" className="mt-8">
+                        <h2 className="text-2xl font-semibold text-gray-800">References</h2>
+                        <p className="mt-2 text-lg text-gray-700">Available upon request.</p>
+                    </section>
 
-            Thank you for considering my application. I look forward to the opportunity to meet with you.
-
-            Sincerely,
-            Jenine Kyle Gutierrez
-
-This resume and cover letter present you as a committed and skilled professional, ready to contribute to the healthcare industry. Feel free to update the company name and other details based on the specific job you're applying for.</p>
+                    <section id="cover-letter" className="mt-8">
+                        <h2 className="text-2xl font-semibold text-gray-800">Cover Letter</h2>
+                        <div className="mt-2 text-lg text-gray-700">
+                            <p>Jenine Kyle Gutierrez</p>
+                            <p>jgutierrez18@cnih.ca</p>
+                            <p>778-847-9104</p>
+                            <p>[Date]</p>
+                            <br />
+                            <p>Hiring Manager</p>
+                            <p>[Healthcare Facility Name]</p>
+                            <p>[Healthcare Facility Address]</p>
+                            <p>[City, State, Zip Code]</p>
+                            <br />
+                            <p>Dear Hiring Manager,</p>
+                            <p>
+                                I am writing to express my interest in applying for the Diagnostic Medical Sonographer position at [Healthcare Facility Name]. I am currently a Diagnostic Medical Sonography student at the Canadian National Institute of Health (CNIH), set to graduate in December 2025. I am deeply passionate about medical imaging and patient care, and I believe my background, skills, and dedication would allow me to make a valuable contribution to your team.
+                            </p>
+                            <p>
+                                My journey in healthcare began with the completion of a Medical Office Assistant certificate in December 2022, followed by a position as a Clerk at an ultrasound clinic. This experience immersed me in the field of diagnostic imaging and fueled my passion for sonography. Through my work, I developed strong technical skills and a profound understanding of patient-centered care, which I believe is essential in the medical imaging field.
+                            </p>
+                            <p>
+                                In addition to my formal education, I have had the privilege of working hands-on with patients and diagnostic equipment. I am committed to ensuring that every patient feels seen, heard, and cared for during their healthcare journey. I am also an active member of Sonography Canada, ARDMS, and OARMS, which keeps me updated with the latest advancements in the field.
+                            </p>
+                            <p>
+                                I am excited to bring my technical expertise, compassionate care, and commitment to making a meaningful difference to your healthcare facility. I am confident that I can help deliver accurate diagnoses and contribute to your high standards of patient care. I would welcome the opportunity to discuss my qualifications further and look forward to the possibility of joining your team.
+                            </p>
+                            <p>Thank you for considering my application. I look forward to the opportunity to meet with you.</p>
+                            <br />
+                            <p>Sincerely,</p>
+                            <p>Jenine Kyle Gutierrez</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </div>
     );
 };
