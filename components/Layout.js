@@ -5,7 +5,7 @@ export default function Layout({ children }) {
     return (
         <div className="flex min-h-screen bg-gray-100 text-gray-900">
             {/* Sidebar */}
-            <nav className="w-[20%] bg-[#7C9AA0] text-white py-4 px-8 flex flex-col">
+            <nav className="min-w-[200px] w-[20%] bg-[#7C9AA0] text-white py-4 px-8 flex flex-col">
 
                 <Image
                     src={'/place2.jpg'} // Dynamically changing image
@@ -25,7 +25,7 @@ export default function Layout({ children }) {
                         <Link href="/resume" className="text-md font-medium hover:text-[#234C5D]">RESUME</Link>
                     </li>
                     <li>
-                        <Link href="/resume" className="text-md font-medium hover:text-[#234C5D]">COVER LETTER</Link>
+                        <Link href="/coverletter" className="text-md font-medium hover:text-[#234C5D]">COVER LETTER</Link>
                     </li>
                     <li>
                         <Link href="/sonographer" className="text-md font-medium hover:text-[#234C5D]">THE SONOGRAPHER</Link>

@@ -78,6 +78,23 @@ export default function Home() {
               With a strong foundation in both technical expertise and compassionate care, I am excited to contribute to the healthcare industry, helping to provide accurate diagnoses and make a meaningful difference in patients' lives.
             </p>
           </div>
+
+          <div className="text-center my-6 text-xl font-medium text-[#234C5D]">Other Side of Me</div>
+          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            {images.map((image, index) => (
+              <div key={index} style={{ width: '400px' }}>
+                <Image
+                  src={image}
+                  alt={`Jenine Kyle ${index + 1}`}
+                  width={400}
+                  height={400}
+                  objectFit="cover"
+                  className="rounded-lg"
+                />
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </div >
