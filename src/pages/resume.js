@@ -1,8 +1,7 @@
 
-
 const Resume = () => {
     return (
-        <div>
+        <div className='p-4'>
             <h2>Resume</h2>
             <p>
                 Name: Jenine Kyle Gutierrez

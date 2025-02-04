@@ -15,60 +15,71 @@ export default function Home() {
     "/place6.jpg",
     "/place7.jpg",
     "/place8.jpg",
-  ]
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 2 seconds
+    }, 2000); // Change image every 2 seconds
 
     return () => clearInterval(interval); // Clean up the interval on component unmount
   }, [images.length]);
 
   return (
-    <div
-      className="w-[100%] flex min-h-screen bg-[#F9F9F9]"
-    // style={{
-    //   backgroundImage: `url(/place6.jpg)`, // Dynamically changing background image
-    // }}
-    >
-      {/* Main Content */}
-      <div className="flex-grow p-8 sm:p-20 gap-16">
-        <h1 className="text-4xl font-bold my-10">About Me</h1>
-        <div className="my-10 mx-auto w-[400px] h-auto overflow-hidden">
-          <div className="flex flex-wrap justify-between">
-            {images.map((item, i) => (
-              <div key={i} className="w-1/4 p-2">
-                <Image
-                  src={item} // Dynamically changing image
-                  alt="Jenine Kyle"
-                  width={250} // Set the width to 250px
-                  height={250} // Set the height to 250px
-                  objectFit="cover" // This ensures the image will cover the div area without distortion
-                />
-              </div>
-            ))}
-          </div>
+    <div className="w-full min-h-screen bg-[#F9F9F9]">
+
+      <div
+        className="relative w-full bg-cover bg-center mb-6"
+        style={{
+          backgroundImage: `url(${images[4]})`,
+          height: '300px',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Black overlay with opacity */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+
+        {/* Text on top of the background */}
+        <div className="absolute inset-0 flex items-center justify-center text-center text-white z-10">
+          <h1 className="text-5xl md:text-9xl font-bold color-black" style={{ margin: 'auto auto', fontSize: '80px', color: '#B95C17', fontWeight: 700, marginTop: '70px' }}>ABOUT ME</h1>
         </div>
-
-
-        <p className="text-lg text-gray-600">
-          Hi, I’m Jenine Gutierrez, a dedicated Diagnostic Medical Sonography student at the Canadian National Institute of Health (CNIH), on track to graduate in December 2025.
-          <br /><br />
-          From an early age, I was drawn to the healthcare field, inspired by the impact that compassionate, skilled professionals can have on people’s lives. My journey began with earning a Medical Office Assistant certificate in December 2022, equipping me with essential knowledge of medical office operations and patient care. Working as a Clerk at an ultrasound clinic, I became immersed in the world of diagnostic imaging, gaining hands-on experience with patient interactions, clinic workflows, and the vital role sonographers play in early detection and diagnosis.
-          <br /><br />
-          This experience solidified my passion for medical imaging and patient-centered care. Sonography is more than just a profession to me—it’s a way to combine my love for science, technology, and human connection. Every scan tells a story, and I am committed to ensuring that each patient feels seen, heard, and cared for during their healthcare journey.
-          <br /><br />
-          My sonography program consists of 12 months of theory and scan lab training, followed by an 8-month practicum rotation, where I will refine my technical skills and bedside manner in a clinical setting. I am in good standing with CNIH and a proud student member of Sonography Canada, ARDMS, and OARMS, staying engaged with the latest advancements in the field.
-          <br /><br />
-          With a strong foundation in both technical expertise and compassionate care, I am excited to contribute to the healthcare industry, helping to provide accurate diagnoses and make a meaningful difference in patients' lives.
-        </p>
       </div>
 
-      {/* Footer (if needed) */}
-      {/* <footer className="w-full bg-gray-900 text-white py-4 text-center">
-        © {new Date().getFullYear()} My Portfolio. All Rights Reserved.
-      </footer> */}
-    </div>
+
+
+      {/* About Me Section */}
+      <div className="w-full bg-[#F3F4F6] py-20 px-8 sm:px-20">
+        <div className="flex flex-col sm:flex-row justify-between gap-8">
+          {/* Image section */}
+          {/* <div className="w-full sm:w-[40%] h-auto border border-black">
+            <Image
+              src={images[currentImageIndex]} // Dynamically changing image
+              alt="Jenine Kyle"
+              width={400} // Set the width to 250px
+              height={400} // Set the height to 250px
+              objectFit="cover" // This ensures the image will cover the div area without distortion
+            />
+          </div> */}
+
+          {/* About Me Text */}
+          <div className="w-full sm:w-[55%] text-lg text-gray-600">
+            <p >Hi, I'm <span className="text-xl font-medium text-[#234C5D]">Jenine Gutierrez</span></p>
+            <p style={{ marginTop: '20px' }}>
+              a dedicated Diagnostic Medical Sonography student at the Canadian National Institute of Health (CNIH), on track to graduate in December 2025.
+              <br /><br />
+              From an early age, I was drawn to the healthcare field, inspired by the impact that compassionate, skilled professionals can have on people’s lives. My journey began with earning a Medical Office Assistant certificate in December 2022, equipping me with essential knowledge of medical office operations and patient care. Working as a Clerk at an ultrasound clinic, I became immersed in the world of diagnostic imaging, gaining hands-on experience with patient interactions, clinic workflows, and the vital role sonographers play in early detection and diagnosis.
+              <br /><br />
+              This experience solidified my passion for medical imaging and patient-centered care. Sonography is more than just a profession to me—it’s a way to combine my love for science, technology, and human connection. Every scan tells a story, and I am committed to ensuring that each patient feels seen, heard, and cared for during their healthcare journey.
+              <br /><br />
+              My sonography program consists of 12 months of theory and scan lab training, followed by an 8-month practicum rotation, where I will refine my technical skills and bedside manner in a clinical setting. I am in good standing with CNIH and a proud student member of Sonography Canada, ARDMS, and OARMS, staying engaged with the latest advancements in the field.
+              <br /><br />
+              With a strong foundation in both technical expertise and compassionate care, I am excited to contribute to the healthcare industry, helping to provide accurate diagnoses and make a meaningful difference in patients' lives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div >
   );
 }
