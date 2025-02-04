@@ -1,9 +1,8 @@
-import Navbar from "../../components/NavBar"
+
 
 const About = () => {
     return (
         <div>
-            <Navbar />
             <h1>About Me</h1>
             <p>Hi, I’m Jenine Gutierrez, a dedicated Diagnostic Medical Sonography student at the Canadian National Institute of Health (CNIH), on track to graduate in December 2025.
 
