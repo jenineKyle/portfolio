@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-primary: var(--font-montserrat); /* Use Montserrat */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,11 +17,13 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-primary), sans-serif;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
- font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-primary), sans-serif;
+  height: 100vh;
+  max-height: 100vh;
 }

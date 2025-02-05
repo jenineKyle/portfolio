@@ -1,24 +1,56 @@
-import "../src/app/globals.css";
+"use client"; // Ensures proper React hook usage in Next.js
+
+import { useState } from "react";
+import Link from "next/link";
+import { FaBars, FaTimes } from "react-icons/fa"; // Icons for the mobile menu
 
 export default function NavBar() {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <nav className="w-64 bg-gray-900 text-white py-4 px-8 flex flex-col">
-            <div className="text-xl font-bold mb-6">My Portfolio</div>
-            <ul className="flex flex-col space-y-4">
+        <nav className="bg-[#7C9AA0] text-white py-4 px-8 fixed top-0 w-full z-10">
+            <div className="flex justify-between items-center">
+                {/* Logo / Site Name */}
+                <div className="text-4xl font-bold text-[#B95C17] mb-2">Jenine Gutierrez</div>
+
+                {/* Hamburger Menu Button - Only Visible on Mobile */}
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="md:hidden text-white focus:outline-none"
+                >
+                    {isOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
+                </button>
+            </div>
+
+            {/* Navigation Links */}
+            <ul
+                className={`${isOpen ? "flex flex-col space-y-4 mt-4" : "hidden"
+                    } md:flex md:flex-row md:space-x-8 md:mt-0 text-lg`}
+            >
                 <li>
-                    <a href="/" className="hover:text-gray-400">Home</a>
+                    <Link href="/" className="hover:text-[#234C5D] transition">
+                        ABOUT ME
+          </Link>
                 </li>
                 <li>
-                    <a href="/about" className="hover:text-gray-400">About Me</a>
+                    <Link href="/resume" className="hover:text-[#234C5D] transition">
+                        RESUME
+          </Link>
                 </li>
                 <li>
-                    <a href="/resume" className="hover:text-gray-400">Resume and Cover Letter</a>
+                    <Link href="/coverletter" className="hover:text-[#234C5D] transition">
+                        COVER LETTER
+          </Link>
                 </li>
                 <li>
-                    <a href="/sonographer" className="hover:text-gray-400">The Sonographer</a>
+                    <Link href="/sonographer" className="hover:text-[#234C5D] transition">
+                        THE SONOGRAPHER
+          </Link>
                 </li>
                 <li>
-                    <a href="/contact" className="hover:text-gray-400">Contact</a>
+                    <Link href="/contact" className="hover:text-[#234C5D] transition">
+                        CONTACT
+          </Link>
                 </li>
             </ul>
         </nav>

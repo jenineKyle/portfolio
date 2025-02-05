@@ -4,7 +4,7 @@ import { FaDownload } from "react-icons/fa";
 export default function CoverLetter() {
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
-            <div className="max-w-3xl bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative">
+            <div className="max-w-1xl bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative">
                 {/* Download Button */}
                 <a
                     style={{ background: '#B95C17', fontWeight: 600, width: 'fit-content', padding: '10px 20px', borderRadius: '10px', marginLeft: 'auto' }}
@@ -12,7 +12,7 @@ export default function CoverLetter() {
                     download="Jenine_Gutierrez_Cover_Letter.pdf"
                     className="absolute top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 shadow hover:bg-blue-700 transition"
                 >
-                    <FaDownload />
+                    <FaDownload style={{ marginRight: '10px' }} />
           Download PDF
         </a>
 

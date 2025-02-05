@@ -43,7 +43,7 @@ export default function Home() {
 
         {/* Text on top of the background */}
         <div className="absolute inset-0 flex items-center justify-center text-center text-white z-10">
-          <h1 className="text-5xl md:text-9xl font-bold color-black" style={{ margin: 'auto auto', fontSize: '80px', color: '#B95C17', fontWeight: 700, marginTop: '70px' }}>ABOUT ME</h1>
+          <h1 className="text-5xl md:text-9xl font-bold color-black" style={{ margin: 'auto auto', fontSize: '80px', color: '#B95C17', fontWeight: 700, marginTop: '100px' }}>ABOUT ME</h1>
         </div>
       </div>
 
@@ -51,17 +51,19 @@ export default function Home() {
 
       {/* About Me Section */}
       <div className="w-full bg-[#F3F4F6] py-20 px-8 sm:px-20">
-        <div className="flex flex-col sm:flex-row justify-between gap-8">
-          {/* Image section */}
-          {/* <div className="w-full sm:w-[40%] h-auto border border-black">
+        <div className="flex sm:flex-row justify-between">
+
+          <div className="mr-[20px]">
             <Image
-              src={images[currentImageIndex]} // Dynamically changing image
-              alt="Jenine Kyle"
-              width={400} // Set the width to 250px
-              height={400} // Set the height to 250px
-              objectFit="cover" // This ensures the image will cover the div area without distortion
+              src={images[currentImageIndex]}
+              alt={`Jenine Kyle ${currentImageIndex}`}
+              width={400}
+              height={400}
+              objectFit="cover"
+              className="rounded-lg"
             />
-          </div> */}
+          </div>
+
 
           {/* About Me Text */}
           <div className="w-full sm:w-[55%] text-lg text-gray-600">
@@ -79,24 +81,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="text-center my-6 text-xl font-medium text-[#234C5D]">Other Side of Me</div>
-          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-            {images.map((image, index) => (
-              <div key={index} style={{ width: '400px' }}>
-                <Image
-                  src={image}
-                  alt={`Jenine Kyle ${index + 1}`}
-                  width={400}
-                  height={400}
-                  objectFit="cover"
-                  className="rounded-lg"
-                />
-              </div>
-            ))}
-          </div>
-
         </div>
       </div>
-    </div >
+    </div>
+
   );
 }

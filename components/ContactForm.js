@@ -2,7 +2,7 @@ import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100 p-6">
+        <div className="h-auto flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100 p-6 m-20">
             <div className="w-full max-w-md bg-white/80 backdrop-blur-lg p-8 rounded-3xl shadow-lg border border-gray-300">
                 <h1 className="text-3xl font-bold text-center text-[#B95C17] mb-6">
                     Contact Information
